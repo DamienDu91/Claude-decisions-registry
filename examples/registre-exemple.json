@@ -1,0 +1,768 @@
+{
+ "Config": [
+  [
+   "cle",
+   "valeur"
+  ],
+  [
+   "projet",
+   "Portail fournisseurs (exemple fictif)"
+  ],
+  [
+   "objectif",
+   "Remplacer l'échange de bons de commande par mail par un portail fournisseurs d'ici juin 2027."
+  ],
+  [
+   "centre",
+   "E01"
+  ],
+  [
+   "cadence_jours",
+   "7"
+  ],
+  [
+   "constat",
+   "Le lot 2 a enfin un sponsor, mais l'avis du DPO manque toujours."
+  ]
+ ],
+ "Entités": [
+  [
+   "id",
+   "libellé",
+   "type",
+   "alias",
+   "fiche",
+   "bloquant",
+   "statut",
+   "créé le",
+   "mis à jour le"
+  ],
+  [
+   "E01",
+   "Portail fournisseurs",
+   "programme",
+   "portail",
+   "Programme de dématérialisation des échanges avec les fournisseurs.",
+   "non",
+   "actif",
+   "2026-09-01",
+   "2026-11-20"
+  ],
+  [
+   "E02",
+   "Claire Martin",
+   "personne",
+   "CM",
+   "Directrice des achats, sponsor du lot 1.",
+   "non",
+   "actif",
+   "2026-09-01",
+   "2026-09-01"
+  ],
+  [
+   "E03",
+   "Lot 1 commandes",
+   "lot",
+   "",
+   "Commandes et accusés de réception.",
+   "non",
+   "actif",
+   "2026-09-01",
+   "2026-11-01"
+  ],
+  [
+   "E04",
+   "Lot 2 factures",
+   "lot",
+   "",
+   "Dépôt et suivi des factures.",
+   "oui",
+   "actif",
+   "2026-09-01",
+   "2026-11-15"
+  ],
+  [
+   "E05",
+   "Hébergement interne",
+   "option",
+   "on-prem",
+   "Serveurs de l'entreprise.",
+   "non",
+   "remplacé par E06",
+   "2026-09-10",
+   "2026-10-20"
+  ],
+  [
+   "E06",
+   "Cloud souverain",
+   "option",
+   "",
+   "Hébergement chez un prestataire qualifié.",
+   "non",
+   "actif",
+   "2026-10-20",
+   "2026-10-20"
+  ],
+  [
+   "E07",
+   "DSI",
+   "équipe",
+   "IT",
+   "Valide l'architecture et l'hébergement.",
+   "non",
+   "actif",
+   "2026-09-01",
+   "2026-09-01"
+  ],
+  [
+   "E08",
+   "DPO",
+   "personne",
+   "",
+   "Avis requis sur les données fournisseurs.",
+   "non",
+   "actif",
+   "2026-09-15",
+   "2026-09-15"
+  ],
+  [
+   "E09",
+   "Budget 2027",
+   "contrainte",
+   "",
+   "Enveloppe votée en décembre.",
+   "oui",
+   "actif",
+   "2026-09-01",
+   "2026-11-10"
+  ],
+  [
+   "E10",
+   "ERP achats",
+   "système",
+   "",
+   "Source des commandes.",
+   "non",
+   "actif",
+   "2026-09-01",
+   "2026-09-01"
+  ],
+  [
+   "E11",
+   "Pilote 20 fournisseurs",
+   "jalon",
+   "pilote",
+   "Premier test réel.",
+   "non",
+   "actif",
+   "2026-10-01",
+   "2026-11-01"
+  ],
+  [
+   "E12",
+   "Paul Roche",
+   "personne",
+   "PR",
+   "Contrôleur de gestion.",
+   "non",
+   "actif",
+   "2026-10-05",
+   "2026-10-05"
+  ]
+ ],
+ "Liens": [
+  [
+   "id",
+   "source (Exxx)",
+   "cible (Exxx)",
+   "relation",
+   "statut",
+   "date d'effet (valid_at)",
+   "fin d'effet (invalid_at)",
+   "consigné le (recorded_at)",
+   "clos le (expired_at)",
+   "revoir le",
+   "source (repère)",
+   "auteur",
+   "niveau de preuve",
+   "remplace (Lxxx)",
+   "remplacé par (Lxxx)"
+  ],
+  [
+   "L01",
+   "E01",
+   "E03",
+   "contient",
+   "fait",
+   "2026-09-01",
+   "",
+   "2026-09-02",
+   "",
+   "",
+   "S1",
+   "Claire Martin",
+   "primaire",
+   "",
+   ""
+  ],
+  [
+   "L02",
+   "E01",
+   "E04",
+   "contient",
+   "fait",
+   "2026-09-01",
+   "",
+   "2026-09-02",
+   "",
+   "",
+   "S1",
+   "Claire Martin",
+   "primaire",
+   "",
+   ""
+  ],
+  [
+   "L03",
+   "E02",
+   "E03",
+   "parraine",
+   "decide",
+   "2026-09-05",
+   "",
+   "2026-09-06",
+   "",
+   "",
+   "S2",
+   "Claire Martin",
+   "primaire",
+   "",
+   ""
+  ],
+  [
+   "L04",
+   "E01",
+   "E05",
+   "sera hébergé sur",
+   "decide",
+   "2026-09-20",
+   "2026-10-20",
+   "2026-09-21",
+   "2026-10-22",
+   "",
+   "S3",
+   "DSI",
+   "primaire",
+   "",
+   "L05"
+  ],
+  [
+   "L05",
+   "E01",
+   "E06",
+   "sera hébergé sur",
+   "decide",
+   "2026-10-20",
+   "",
+   "2026-10-22",
+   "",
+   "",
+   "S4",
+   "DSI",
+   "primaire",
+   "L04",
+   ""
+  ],
+  [
+   "L06",
+   "E07",
+   "E06",
+   "valide",
+   "fait",
+   "2026-10-20",
+   "",
+   "2026-10-22",
+   "",
+   "",
+   "S4",
+   "DSI",
+   "primaire",
+   "",
+   ""
+  ],
+  [
+   "L07",
+   "E08",
+   "E04",
+   "doit rendre un avis sur",
+   "ouvert",
+   "",
+   "",
+   "2026-10-01",
+   "",
+   "2026-11-30",
+   "S5",
+   "Claude",
+   "synthese",
+   "",
+   ""
+  ],
+  [
+   "L08",
+   "E09",
+   "E04",
+   "conditionne",
+   "hyp",
+   "",
+   "",
+   "2026-11-10",
+   "",
+   "2026-12-15",
+   "S6",
+   "Paul Roche",
+   "rapporte",
+   "",
+   ""
+  ],
+  [
+   "L09",
+   "E03",
+   "E10",
+   "lit les commandes de",
+   "fait",
+   "2026-10-01",
+   "",
+   "2026-10-03",
+   "",
+   "",
+   "S7",
+   "DSI",
+   "primaire",
+   "",
+   ""
+  ],
+  [
+   "L10",
+   "E03",
+   "E11",
+   "passe par",
+   "propose",
+   "",
+   "",
+   "2026-10-05",
+   "",
+   "",
+   "S8",
+   "Claude",
+   "synthese",
+   "",
+   ""
+  ],
+  [
+   "L11",
+   "E12",
+   "E09",
+   "chiffre",
+   "fait",
+   "2026-11-08",
+   "",
+   "2026-11-10",
+   "",
+   "2026-11-15",
+   "S6",
+   "Paul Roche",
+   "rapporte",
+   "",
+   ""
+  ]
+ ],
+ "Décisions": [
+  [
+   "id",
+   "énoncé",
+   "domaine",
+   "statut",
+   "décideur",
+   "proposé par",
+   "niveau de preuve",
+   "preuve",
+   "date d'effet (valid_at)",
+   "fin d'effet (invalid_at)",
+   "consigné le (recorded_at)",
+   "clos le (expired_at)",
+   "remplace",
+   "remplacé par",
+   "alternatives écartées",
+   "prédiction ou critère de succès",
+   "revoir le",
+   "résultat observé",
+   "entités (Exxx)"
+  ],
+  [
+   "D01",
+   "Lancer le lot 1 avant le lot 2",
+   "périmètre",
+   "décidé",
+   "Claire Martin",
+   "Claire Martin",
+   "primaire",
+   "Compte rendu du 5 sept.",
+   "2026-09-05",
+   "",
+   "2026-09-06",
+   "",
+   "",
+   "",
+   "Big bang",
+   "20 fournisseurs actifs fin janvier",
+   "2027-02-01",
+   "",
+   "E03,E04"
+  ],
+  [
+   "D02",
+   "Héberger le portail en interne",
+   "architecture",
+   "remplacé",
+   "DSI",
+   "DSI",
+   "primaire",
+   "Mail DSI du 20 sept.",
+   "2026-09-20",
+   "2026-10-20",
+   "2026-09-21",
+   "2026-10-22",
+   "",
+   "D03",
+   "Cloud public",
+   "",
+   "",
+   "",
+   "E05"
+  ],
+  [
+   "D03",
+   "Héberger le portail sur un cloud souverain",
+   "architecture",
+   "décidé",
+   "DSI",
+   "DPO",
+   "primaire",
+   "Comité du 20 oct.",
+   "2026-10-20",
+   "",
+   "2026-10-22",
+   "",
+   "D02",
+   "",
+   "Interne (coût de maintenance)",
+   "Mise en ligne du pilote sans incident de sécurité",
+   "2027-01-15",
+   "",
+   "E06,E07"
+  ],
+  [
+   "D04",
+   "Qui sponsorise le lot 2 ?",
+   "gouvernance",
+   "décidé",
+   "Comité de direction",
+   "Claude",
+   "synthese",
+   "Voir D06",
+   "2026-11-25",
+   "",
+   "2026-11-15",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "2026-11-30",
+   "",
+   "E04,E09"
+  ],
+  [
+   "D05",
+   "Pilote limité à 20 fournisseurs",
+   "périmètre",
+   "proposé",
+   "Claire Martin",
+   "Claude",
+   "synthese",
+   "",
+   "",
+   "",
+   "2026-10-05",
+   "",
+   "",
+   "",
+   "50 fournisseurs",
+   "",
+   "",
+   "",
+   "E11"
+  ],
+  [
+   "D06",
+   "Nommer Paul Roche sponsor du lot 2",
+   "gouvernance",
+   "décidé",
+   "Comité de direction",
+   "Claire Martin",
+   "rapporte",
+   "Compte rendu du comité, rapporté par Claire Martin",
+   "2026-11-25",
+   "",
+   "2026-11-26",
+   "",
+   "",
+   "",
+   "",
+   "Lot 2 démarré avant fin janvier",
+   "2027-02-01",
+   "",
+   "E04,E12"
+  ]
+ ],
+ "Faits": [
+  [
+   "id",
+   "énoncé",
+   "type",
+   "entités",
+   "source",
+   "auteur",
+   "niveau de preuve",
+   "date d'effet (valid_at)",
+   "fin d'effet (invalid_at)",
+   "consigné le (recorded_at)",
+   "clos le (expired_at)",
+   "revoir le",
+   "statut",
+   "remplace"
+  ],
+  [
+   "F01",
+   "L'ERP exporte les commandes chaque nuit",
+   "fait",
+   "E10",
+   "S7",
+   "DSI",
+   "primaire",
+   "2026-10-01",
+   "",
+   "2026-10-03",
+   "",
+   "",
+   "actif",
+   ""
+  ],
+  [
+   "F02",
+   "Le budget 2027 prévoit 120 k€ pour le portail",
+   "inférence",
+   "E09",
+   "S6",
+   "Paul Roche",
+   "rapporte",
+   "2026-11-08",
+   "",
+   "2026-11-10",
+   "",
+   "2026-11-15",
+   "périmé",
+   ""
+  ]
+ ],
+ "Actions": [
+  [
+   "id",
+   "action",
+   "responsable",
+   "échéance",
+   "statut",
+   "décision liée",
+   "mis à jour le"
+  ],
+  [
+   "A01",
+   "Obtenir l'avis écrit du DPO sur le lot 2",
+   "Claire Martin",
+   "2026-11-20",
+   "à faire",
+   "D04",
+   "2026-11-15"
+  ],
+  [
+   "A02",
+   "Signer le contrat d'hébergement",
+   "DSI",
+   "2026-12-10",
+   "en cours",
+   "D03",
+   "2026-11-10"
+  ]
+ ],
+ "Contradictions": [
+  [
+   "id",
+   "sujet",
+   "version A (source, date)",
+   "version B (source, date)",
+   "statut",
+   "tranchée par (Dxxx)"
+  ],
+  [
+   "C01",
+   "Taille du pilote",
+   "20 fournisseurs (S8, 2026-10-05)",
+   "50 fournisseurs (S9, 2026-10-12)",
+   "ouverte",
+   ""
+  ]
+ ],
+ "Rôles": [
+  [
+   "domaine",
+   "décideur légitime",
+   "consultés",
+   "source"
+  ],
+  [
+   "architecture",
+   "DSI",
+   "DPO",
+   "S3"
+  ],
+  [
+   "périmètre",
+   "Claire Martin",
+   "DSI",
+   "S2"
+  ],
+  [
+   "gouvernance",
+   "Comité de direction",
+   "",
+   "S1"
+  ]
+ ],
+ "Sources": [
+  [
+   "repère",
+   "titre",
+   "auteur",
+   "famille",
+   "date",
+   "url"
+  ],
+  [
+   "S1",
+   "Note de cadrage",
+   "Claire Martin",
+   "drive",
+   "2026-09-01",
+   "https://example.org/cadrage"
+  ],
+  [
+   "S2",
+   "Compte rendu du 5 septembre",
+   "Claire Martin",
+   "réunion",
+   "2026-09-05",
+   ""
+  ],
+  [
+   "S3",
+   "Mail DSI hébergement",
+   "DSI",
+   "mail",
+   "2026-09-20",
+   ""
+  ],
+  [
+   "S4",
+   "Comité du 20 octobre",
+   "DSI",
+   "réunion",
+   "2026-10-20",
+   ""
+  ],
+  [
+   "S5",
+   "Synthèse de chat",
+   "Claude",
+   "chat",
+   "2026-10-01",
+   ""
+  ],
+  [
+   "S6",
+   "Point budget",
+   "Paul Roche",
+   "réunion",
+   "2026-11-08",
+   ""
+  ],
+  [
+   "S7",
+   "Dossier technique ERP",
+   "DSI",
+   "drive",
+   "2026-10-01",
+   ""
+  ],
+  [
+   "S8",
+   "Proposition de pilote",
+   "Claude",
+   "chat",
+   "2026-10-05",
+   ""
+  ],
+  [
+   "S9",
+   "Mail achats",
+   "Claire Martin",
+   "mail",
+   "2026-10-12",
+   ""
+  ]
+ ],
+ "À valider": [
+  [
+   "date",
+   "onglet cible",
+   "ligne proposée",
+   "source",
+   "proposé par",
+   "statut"
+  ],
+  [
+   "2026-11-18",
+   "Faits",
+   "Le DPO demande une analyse d'impact",
+   "S5",
+   "Claude",
+   "à valider"
+  ]
+ ],
+ "Journal": [
+  [
+   "date",
+   "entrée",
+   "auteur"
+  ],
+  [
+   "2026-10-22",
+   "Hébergement : D02 remplacée par D03 (cloud souverain).",
+   "Claude"
+  ],
+  [
+   "2026-11-15",
+   "Lot 2 marqué bloquant faute de sponsor.",
+   "Claude"
+  ]
+ ]
+}

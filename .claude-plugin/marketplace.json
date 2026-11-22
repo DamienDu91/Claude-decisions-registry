@@ -1,0 +1,12 @@
+{
+  "name": "claude-decisions-registry",
+  "description": "Skills de registre des décisions et de graphe de connaissances par projet.",
+  "owner": { "name": "Damien Duguet", "url": "https://github.com/DamienDu91" },
+  "plugins": [
+    {
+      "name": "registre-decisions",
+      "source": "./",
+      "description": "Registre des décisions bi-temporel, graphe HTML autonome et handover, tenus dans Google Drive."
+    }
+  ]
+}

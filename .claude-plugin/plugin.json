@@ -1,0 +1,10 @@
+{
+  "name": "registre-decisions",
+  "version": "1.2.0",
+  "description": "Registre des décisions daté et bi-temporel, graphe de connaissances en HTML autonome et handover pour n'importe quel projet suivi dans Google Drive.",
+  "author": { "name": "Damien Duguet", "url": "https://github.com/DamienDu91" },
+  "homepage": "https://github.com/DamienDu91/claude-decisions-registry",
+  "repository": "https://github.com/DamienDu91/claude-decisions-registry",
+  "license": "MIT",
+  "keywords": ["decision-log", "knowledge-graph", "handover", "bitemporal", "google-drive", "skills"]
+}
