@@ -9,7 +9,7 @@
 ## Intégrité du générateur
 
 - Les composants tiers sont vérifiés par empreinte SHA-256 à chaque génération.
-- Sans copie locale des scripts, la skill télécharge une version figée par étiquette (`v1.2.0`) et compare les empreintes de `build_graph.py` et de `graphe_template.html` à celles écrites dans `SKILL.md` avant de l'exécuter.
+- Sans copie locale des scripts, la skill télécharge une version figée par son commit et compare les empreintes de `build_graph.py` et de `graphe_template.html` à celles écrites dans `SKILL.md` avant de l'exécuter.
 
 ## Données sensibles
 

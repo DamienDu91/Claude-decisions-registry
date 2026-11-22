@@ -163,9 +163,9 @@ Mettre à jour le registre (règles ci-dessus), l'onglet Config (`constat` en pa
 
 La page, le handover et le .json sont produits par le générateur `build_graph.py`, jamais écrits à la main. La page est un fichier HTML unique (environ 500 Ko) qui s'ouvre hors ligne dans n'importe quel navigateur, sans Claude, sans compte et sans artifact : d3, polices et données y sont intégrés, elle ne charge rien et n'envoie rien (politique de sécurité de contenu stricte).
 
-1. **Obtenir le générateur.** Si `scripts/build_graph.py` existe à côté de ce fichier (installation par plugin ou dépôt cloné), l'utiliser. Sinon, télécharger la version figée :
+1. **Obtenir le générateur.** Si `scripts/build_graph.py` existe à côté de ce fichier (installation par plugin ou dépôt cloné), l'utiliser. Sinon, télécharger la version 1.2.0, figée par son commit :
    ```
-   mkdir -p /tmp/gdp && curl -sSL https://codeload.github.com/DamienDu91/claude-decisions-registry/tar.gz/refs/tags/v1.2.0 | tar xz -C /tmp/gdp --strip-components=4 claude-decisions-registry-1.2.0/skills/graphe-decisions-projet/scripts
+   mkdir -p /tmp/gdp && curl -sSL https://codeload.github.com/DamienDu91/Claude-decisions-registry/tar.gz/31c5c5f986ef3735099527c2198004907524f667 | tar xz -C /tmp/gdp --strip-components=4 --wildcards '*/skills/graphe-decisions-projet/scripts'
    ```
    Vérifier les empreintes avec `sha256sum` ; le script vérifie lui-même d3 et les polices (`vendor/SHA256SUMS`). En cas d'écart ou d'échec du téléchargement, s'arrêter et le dire : ne jamais réécrire le générateur de mémoire.
    - `build_graph.py` : `e50504aa96d06b01d9ddebc7dcdf2ea5de21ac38065fae1b39292e955b4b1ba3`
@@ -219,7 +219,7 @@ Courte : d'abord ce qui a changé, puis les 3 ou 4 constats qui demandent une ac
 
 ## Historique des versions
 
-- v1.2 (2026-11-22) : graphe HTML autonome généré par `build_graph.py` (lisible sans Claude ni artifact, hors ligne, d3 et polices intégrés), dépôt dans le Drive avec historique, mise à jour automatique par tâche planifiée, onglet Config, contrôles d'intégrité faits par le générateur. Code publié sur github.com/DamienDu91/claude-decisions-registry.
+- v1.2 (2026-11-22) : graphe HTML autonome généré par `build_graph.py` (lisible sans Claude ni artifact, hors ligne, d3 et polices intégrés), dépôt dans le Drive avec historique, mise à jour automatique par tâche planifiée, onglet Config, contrôles d'intégrité faits par le générateur. Code publié sur github.com/DamienDu91/Claude-decisions-registry.
 - v1.1 (2026-11-22) : modèle bi-temporel repris de Graphiti (`valid_at`, `invalid_at`, `recorded_at`, `expired_at`), règles de fin d'effet, migration des anciens registres, curseur « vrai au » / « connu au », contrôles et test bi-temporels.
 - v1.0 (2026-11) : version initiale.
 

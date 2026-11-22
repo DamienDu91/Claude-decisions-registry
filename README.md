@@ -70,7 +70,7 @@ Un seul fichier d'environ 500 Ko, généré par [`build_graph.py`](skills/graphe
 
 Les skills s'appellent alors `/registre-decisions:graphe-decisions-projet` et `/registre-decisions:consigner-decision`.
 
-**Application Claude** (claude.ai, bureau, mobile) : compressez chaque dossier de `skills/` en .zip, avec `SKILL.md` à sa racine, puis importez-le dans les réglages de skills de Claude. Sans le dossier `scripts/`, la skill télécharge le générateur à la version figée `v1.2.0` et vérifie ses empreintes SHA-256 avant de l'exécuter.
+**Application Claude** (claude.ai, bureau, mobile) : compressez chaque dossier de `skills/` en .zip, avec `SKILL.md` à sa racine, puis importez-le dans les réglages de skills de Claude. Sans le dossier `scripts/`, la skill télécharge le générateur, figé par son commit, et vérifie ses empreintes SHA-256 avant de l'exécuter.
 
 **Prérequis** : les connecteurs Google Drive et Google Sheets ; Python 3.9 ou plus récent pour le générateur, sans dépendance externe.
 
